@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JVA Electric Fence</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Local test console · 127.0.0.1:8091</p>
+      <h1>JVA Electric Fence Controller</h1>
+      <p class="lede">Sign in to the fence web page, read return voltage for each zone, and arm or disarm. This is the step before the Home Assistant integration.</p>
+    </header>
+
+    <section class="panel" id="connect-panel">
+      <h2>Controller</h2>
+      <form id="live-form">
+        <label>Host <input id="host" name="host" value="http://192.168.0.12" autocomplete="url"></label>
+        <label>Username <input id="username" name="username" autocomplete="username"></label>
+        <label>Password <input id="password" name="password" type="password" autocomplete="current-password"></label>
+        <div class="actions">
+          <button type="submit">Connect</button>
+          <button type="button" id="env-connect" hidden>Connect with saved .env</button>
+          <button type="button" id="demo-connect">Use sample page</button>
+        </div>
+      </form>
+      <p id="connect-error" class="error" hidden></p>
+    </section>
+
+    <section class="panel" id="status-panel" hidden>
+      <div class="status-bar">
+        <div>
+          <p class="eyebrow" id="source-label"></p>
+          <h2 id="page-title">Zones</h2>
+        </div>
+        <div class="actions">
+          <button type="button" id="refresh">Refresh</button>
+          <button type="button" id="investigate">Check for an API</button>
+          <button type="button" id="clear-alarms" hidden>Clear alarms</button>
+          <button type="button" id="disconnect">Disconnect</button>
+        </div>
+      </div>
+      <p id="refresh-note" class="refresh-note"></p>
+      <p id="status-error" class="error" hidden></p>
+      <div id="zones" class="zones"></div>
+      <div id="probe" hidden></div>
+      <details>
+        <summary>Page text from the controller</summary>
+        <pre id="excerpt"></pre>
+      </details>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>

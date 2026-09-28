@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head><title>JVA Electric Fence WebServer Control</title></head>
+<body>
+<h1>Electric Fence WebServer Control</h1>
+<p>
+  <a href="setup.htm">Setup</a>
+  <a href="setup_es.htm">Instalación</a>
+  <a href="email.htm">Email</a>
+  <a href="email_es.htm">Correo-e</a>
+  <a href="voltage.htm">Voltage</a>
+  <a href="voltage_es.htm">Voltaje</a>
+  <a href="manual.pdf">User Manual</a>
+</p>
+<form method="POST" action="index.htm">
+  Auto-Refresh Rate
+  <select name="refresh">
+    <option value="15" selected>15 Seconds</option>
+    <option value="30">30 Seconds</option>
+  </select>
+  <table border="1">
+    <tr>
+      <td>Zone 1</td>
+      <td>
+        <select name="z1type">
+          <option value="2" selected>2 Zone</option>
+        </select>
+      </td>
+      <td>
+        <input type="radio" name="z1mode" value="0"> Disarmed<br>
+        <input type="radio" name="z1mode" value="1" checked> Armed<br>
+        <input type="radio" name="z1mode" value="2"> Low Power
+      </td>
+      <td style="background-color:#66cc66;">Return<br>4.2 kV</td>
+      <td><input type="button" value="Fence Alarm" style="background-color:#dddddd;"></td>
+      <td><input type="button" value="AC Failed" style="background-color:#dddddd;"></td>
+      <td><input type="button" value="Low Battery" style="background-color:#dddddd;"></td>
+      <td><input type="button" value="Tamper" style="background-color:#dddddd;"></td>
+      <td><input type="button" value="Fault" style="background-color:#dddddd;"></td>
+      <td><input type="button" value="Gate" style="background-color:#dddddd;"></td>
+    </tr>
+    <tr>
+      <td>Zone 1a</td>
+      <td></td>
+      <td>
+        <input type="radio" name="z1amode" value="0"> Disarmed<br>
+        <input type="radio" name="z1amode" value="1" checked> Armed<br>
+        <input type="radio" name="z1amode" value="2"> Low Power
+      </td>
+      <td style="background-color:#66cc66;">Return<br>9.0 kV</td>
+      <td><input type="button" value="Fence Alarm" style="background-color:#dddddd;"></td>
+    </tr>
+  </table>
+  <input type="submit" name="clear_alarms" value="Clear Alarms">
+</form>
+</body>
+</html>

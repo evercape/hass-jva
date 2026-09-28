@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head><title>JVA Electric Fence WebServer Control</title></head>
+<body>
+<form method="GET" action="/status.htm">
+  <table>
+    <tr>
+      <td>Zone 1</td>
+      <td>
+        <input type="radio" name="z1mode" value="0"> Disarmed<br>
+        <input type="radio" name="z1mode" value="1" checked> Armed<br>
+        <input type="radio" name="z1mode" value="2"> Low Power
+      </td>
+      <td style="background-color:#ff3333;">Return 0.8 kV</td>
+      <td style="background-color:#ff3333;">Fence Alarm</td>
+      <td style="background-color:#dddddd;">AC Failed</td>
+    </tr>
+    <tr>
+      <td>Zona 1a</td>
+      <td>
+        <label><input type="radio" name="z1amode" value="off" checked> Desarmado</label>
+        <label><input type="radio" name="z1amode" value="on"> Armado</label>
+        <label><input type="radio" name="z1amode" value="low"> Baja potencia</label>
+      </td>
+      <td bgcolor="green">Retorno 9,0 kV</td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>JVA Embedded: Example Site - Setup </title>
+<link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+<div id="menu">
+<a href="/admin/index.htm">Setup</a>
+<a href="/user/voltages.htm">Voltage</a>
+</div>
+	<div class="box">
+		<form method="post" action="/admin/index.htm">
+			<table>
+				<tr><td class="LFT2">Firmware Version</td><td class="LFT2">1.00</td></tr>
+				<tr><td class="LFT2">MAC Address</td><td class="LFT2">AA:BB:CC:DD:EE:FF</td></tr>
+				<tr><td class="LFT2">IP Address</td><td><input type="text" name="ipCon[1]" value="192.168.1.50" maxlength="15"/></td></tr>
+				<tr><td class="LFT2">DHCP</td><td class="LFT2"><input type="radio" name="ipCon[5]" value="1"  />On
+						<input type="radio" name="ipCon[5]" value="0" checked />Off</td></tr>
+				<tr><td class="LFT2">Sub Net Mask</td><td><input type="text" name="ipCon[2]" value="255.255.255.0" maxlength="15"/></td></tr>
+				<tr><td class="LFT2">Default Gateway</td><td><input type="text" name="ipCon[3]" value="192.168.1.1" maxlength="15"/></td></tr>
+				<tr><td class="LFT2">Primary DNS</td><td><input type="text" name="ipCon[4]" value="8.8.8.8" maxlength="15"/></td></tr>
+				<tr><td></td><td class=""><input type="Submit" value="Save"></td></tr>
+			</table>
+		</form>
+	</div><div class="box">
+		<form method="post" action="/admin/index.htm">
+			<table>
+				<tr><td class="LFT2">Admin Name</td><td><input type="text" name="webAuth[0]" value="admin" maxlength="16"/></td></tr>
+				<tr><td class="LFT2">Admin Password</td><td><input type="text" name="webAuth[1]" value="example-admin-pw" maxlength="16"/></td></tr>
+				<tr><td class="LFT2">User Name</td><td><input type="text" name="webAuth[2]" value="operator" maxlength="16"/></td></tr>
+				<tr><td class="LFT2">User Password</td><td><input type="text" name="webAuth[3]" value="example-user-pw" maxlength="16"/></td></tr>
+				<tr><td class="LFT2">Site Name</td><td><input type="text" name="webAuth[4]" value="Example Site" maxlength="16"/></td></tr>
+				<tr><td></td><td class=""><input type="Submit" value="Save"></td></tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

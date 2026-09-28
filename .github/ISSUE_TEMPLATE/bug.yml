@@ -1,0 +1,31 @@
+name: Bug report
+description: Something went wrong talking to the JVA controller
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not paste the controller password, the setup-page password fields, or a packet capture. Those contain the login.
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened
+      description: What you expected, and what Home Assistant did instead.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Integration version
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Search Settings, System, Logs for jva_electric_fence. Enable debug first if the log is empty.
+      render: text
+    validations:
+      required: true

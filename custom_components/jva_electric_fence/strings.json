@@ -1,0 +1,48 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to the JVA controller",
+        "description": "Use the username and password from the controller web page. The integration reads the setup page and does not press Save.",
+        "data": {
+          "host": "Host",
+          "username": "Username",
+          "password": "Password",
+          "scan_interval": "Polling interval"
+        },
+        "data_description": {
+          "host": "Web address of the controller, for example http://192.168.1.50",
+          "scan_interval": "How often to read voltage and zone state. 15 seconds matches the controller page."
+        }
+      },
+      "reauth_confirm": {
+        "title": "Update the JVA password",
+        "description": "The controller rejected the saved password.",
+        "data": {
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not reach the controller. Check the host.",
+      "invalid_auth": "Username or password was rejected.",
+      "no_controls": "The controller signed in, but Zone 1 arm and disarm controls were not on the page.",
+      "unknown": "Unexpected error talking to the controller."
+    },
+    "abort": {
+      "already_configured": "This controller is already configured.",
+      "reauth_successful": "Password updated."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "JVA polling",
+        "description": "How often to read the controller. Arm and disarm still happen immediately.",
+        "data": {
+          "scan_interval": "Polling interval"
+        }
+      }
+    }
+  }
+}
