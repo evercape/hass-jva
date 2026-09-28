@@ -5,7 +5,7 @@
 
 # JVA Electric Fence
 
-![JVA](custom_components/jva_electric_fence/brand/icon.png)
+<img src="custom_components/jva_electric_fence/brand/icon.png" alt="JVA" width="128">
 
 Home Assistant custom integration for a [JVA](https://jvasecurity.com/) PAE212 electric fence controller with the built-in web server.
 
@@ -23,6 +23,20 @@ The controller's own page is the interface. This integration speaks HTTP to that
 - Read-only diagnostics: firmware, MAC address, IP address, DHCP, subnet, gateway, and DNS
 - The setup page is only read. Save is never pressed, and passwords on that page are not imported
 - One log name, `custom_components.jva_electric_fence`, so a single filter shows the whole integration
+
+## Screenshots
+
+The dashboard below is an example built from the zone switches and return-voltage sensors. Zone A and Zone B are renamed entities. The integration creates **Zone 1** and **Zone 1a**.
+
+![Example dashboard with two armed zones and their return voltages](docs/images/dashboard.png)
+
+The device page has the arm switches, the sensors, and the read-only network details. Addresses in the diagnostics picture are examples.
+
+![Arm and disarm switches](docs/images/controls.png)
+
+![Return voltage and alarm sensors](docs/images/sensors.png)
+
+![Firmware, MAC address, and network diagnostics](docs/images/diagnostics.png)
 
 ## Installation
 
@@ -90,6 +104,8 @@ Each zone that has arm and disarm controls gets:
 | Fence, AC, battery, tamper, fault, gate | On when that lamp is red |
 
 Diagnostic sensors, disabled from the main view and listed on the device page: firmware, MAC address, IP address, DHCP, subnet mask, default gateway, primary DNS.
+
+Zone 1a is read from the same controller page as Zone 1. A lamp that page does not show for Zone 1a stays Unknown. Return voltage and the fence lamp are still reported when the page includes them.
 
 Low power still counts as on, because the energiser is running. Turning the switch off from low power sends Disarmed. Turning it on sends full Armed.
 
