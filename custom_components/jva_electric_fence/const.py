@@ -5,7 +5,7 @@ from __future__ import annotations
 from homeassistant.const import CONF_HOST, CONF_PASSWORD, CONF_SCAN_INTERVAL, CONF_USERNAME
 
 DOMAIN = "jva_electric_fence"
-VERSION = "0.1.0"
+VERSION = "0.1.1"
 DEFAULT_HOST = "http://192.168.1.50"
 DEFAULT_SCAN_INTERVAL = 15
 MIN_SCAN_INTERVAL = 5

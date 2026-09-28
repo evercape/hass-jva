@@ -5,6 +5,8 @@
 
 # JVA Electric Fence
 
+![JVA](custom_components/jva_electric_fence/brand/icon.png)
+
 Home Assistant custom integration for a [JVA](https://jvasecurity.com/) PAE212 electric fence controller with the built-in web server.
 
 It signs in with the same username and password as the controller web page, reads return voltage and alarm lamps, and arms or disarms Zone 1 and Zone 1a. Setup is done in the Home Assistant UI. There is no YAML configuration.
