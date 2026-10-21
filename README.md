@@ -44,13 +44,14 @@ Home Assistant must be able to open the controller's web page. The host running 
 
 ### HACS
 
-This integration is not in the default HACS catalog. Add it as a custom repository.
+[![Open your Home Assistant instance and open this repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=evercape&repository=hass-jva&category=integration)
 
-1. Open HACS, then the three-dot menu, then **Custom repositories**.
-2. Add `https://github.com/evercape/hass-jva` and choose **Integration**.
-3. Search for **JVA Electric Fence** and download it.
-4. Restart Home Assistant.
-5. Go to **Settings → Devices & services → Add Integration** and search for **JVA Electric Fence**.
+This integration is in the default HACS catalog.
+
+1. Open HACS, then **Integrations**.
+2. Search for **JVA Electric Fence** and download it.
+3. Restart Home Assistant.
+4. Go to **Settings → Devices & services → Add Integration** and search for **JVA Electric Fence**.
 
 HACS installs the release archive `jva_electric_fence.zip`. Download the latest release rather than copying the repository by hand if you want updates.
 
@@ -90,7 +91,7 @@ The device name is the site name from the setup page. Firmware is shown as the s
 
 Change the poll interval from the integration's **Configure** button.
 
-If the controller later rejects the password, Home Assistant starts a re-auth prompt. Update the password there. The host and username stay as they were.
+If the controller later rejects the password, Home Assistant starts a re-auth prompt and pauses polling until you answer it. Update the password there. The host and username stay as they were.
 
 ## Entities
 
@@ -190,5 +191,5 @@ The controller page and the [PAE212 manual](https://www.pakton.com.au/PAE212_Ass
 [license-shield]: https://img.shields.io/github/license/evercape/hass-jva.svg?style=for-the-badge
 [license]: https://github.com/evercape/hass-jva/blob/main/LICENSE
 [hacs]: https://github.com/hacs/integration
-[hacsbadge]: https://img.shields.io/badge/HACS-Custom-orange.svg?style=for-the-badge
+[hacsbadge]: https://img.shields.io/badge/HACS-Default-41BDF5.svg?style=for-the-badge
 [maintenance-shield]: https://img.shields.io/badge/maintainer-Martin%20%40evercape-blue.svg?style=for-the-badge

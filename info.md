@@ -11,6 +11,8 @@ Custom integration for a JVA PAE212 electric fence controller.
 
 ## Installation
 
+Search for **JVA Electric Fence** in HACS. It is in the default catalog.
+
 1. Click download.
 2. Restart Home Assistant.
 3. Add the **JVA Electric Fence** integration and follow the form.

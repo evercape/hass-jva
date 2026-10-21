@@ -8,6 +8,7 @@ from datetime import timedelta
 
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
+from homeassistant.exceptions import ConfigEntryAuthFailed
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
 
 from .const import (
@@ -93,8 +94,7 @@ class JvaCoordinator(DataUpdateCoordinator[JvaSnapshot]):
                 snapshot = await self.hass.async_add_executor_job(self._pull)
             except AuthError as err:
                 LOGGER.warning("AUTH host=%s login rejected", self.host)
-                self._start_reauth()
-                raise UpdateFailed(f"AUTH host={self.host} login rejected") from err
+                raise ConfigEntryAuthFailed(f"AUTH host={self.host} login rejected") from err
             except ControllerError as err:
                 LOGGER.warning("POLL host=%s failed: %s", self.host, err)
                 raise UpdateFailed(f"POLL host={self.host} {err}") from err
